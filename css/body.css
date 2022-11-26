@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    background-color: hsl(0, 0%, 90%);
+    margin: 5%;
+}
+
+.header {
+    font-family: 'Lato', sans-serif;
+}
+
+.subHeader {
+    font-family: 'Lato', sans-serif;
+}
