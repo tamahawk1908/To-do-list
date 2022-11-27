@@ -1,0 +1,10 @@
+.section {
+    text-align: start;
+    background-color: white;
+}
+
+.section__header {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    border-bottom: solid 2px hsl(0, 0%, 90%);
+}

@@ -8,13 +8,10 @@ html {
 
 .body {
     background-color: hsl(0, 0%, 90%);
-    margin: 5%;
+    margin: 10%;
+    max-width: 768px;
 }
 
 .header {
-    font-family: 'Lato', sans-serif;
-}
-
-.subHeader {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
