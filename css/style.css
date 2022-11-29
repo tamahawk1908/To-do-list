@@ -8,10 +8,15 @@ html {
 
 .body {
     background-color: hsl(0, 0%, 90%);
-    margin: 10%;
+    margin: 10% auto;
     max-width: 768px;
 }
 
+@media (max-width: 768px) {
+    .body {
+        margin: 5%;
+    }
+}
 .header {
     font-family: 'Montserrat', sans-serif;
 }

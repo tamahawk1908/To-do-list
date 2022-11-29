@@ -5,6 +5,16 @@
 
 .section__header {
     font-family: 'Montserrat', sans-serif;
-    margin: 20px;
+    padding: 20px;
+    margin: 10px 0px 0px 0px;
     border-bottom: solid 2px hsl(0, 0%, 90%);
+}
+
+.section__list {
+    background-color: white;
+    padding: 20px;
+}
+
+.task__content {
+    text-decoration: none;
 }

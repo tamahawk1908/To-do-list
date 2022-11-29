@@ -16,7 +16,7 @@
     color: white;
     background-color: teal;
     border: teal;
-    margin: 5px;
+    margin: 10px;
     padding: 10px;
 }
 
@@ -27,11 +27,19 @@
 @media (max-width: 768px) {
     .form__button {
         width: 100%;
+        margin: 5px;
     }
 }
 
 .form__input {
-    border: solid 2px;
+    overflow: auto;
     flex-grow: 1;
-    margin: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .form__input {
+        margin: 5px;
+    }
 }
