@@ -8,11 +8,11 @@
 
         function clearInput() {
             document.getElementById("newTask").value = "",
-            document.getElementById("newTask").focus();
+                document.getElementById("newTask").focus();
         }
 
         clearInput();
-        
+
         render();
     };
 
@@ -51,8 +51,9 @@
             htmlString += `
             <li type="none" class="task__content"
             >
-            <button class="button__done js-done"></button>
-            <span class="task__content--text${task.done ? " task__content--done" : ""}">${task.content}</span>
+            <button class="button__done js-done">${task.done ? "✔" : ""}</button>
+            <span class="task__content--text${task.done ? " task__content--done" : ""}">
+            ${task.content}</span>
             <button class="button__remove js-remove">
             <span class="button__remove--icon">&#128465;</span>
             </button>
