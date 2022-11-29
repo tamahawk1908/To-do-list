@@ -1,3 +1,46 @@
 .task__content {
+    display: flex;
+    gap: 5px;
+    border-bottom: 2px solid #ccc;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.task__content--done {
     text-decoration: line-through;
+}
+
+.task__content--text {
+    text-align: center;
+    flex-grow: 1;   
+}
+
+.button__done {
+    align-content: flex-start;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border-style: none;
+    background-color: green;
+}
+
+.button__done:focus {
+    border: 2px solid;
+}
+
+.button__remove {
+    align-content: flex-end;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border-style: none;
+    background-color: red;
+}
+
+.button__remove:focus {
+    border: 2px solid;
+}
+
+.button__remove--icon {
+    color: white;
 }
