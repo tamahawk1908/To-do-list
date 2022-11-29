@@ -1,29 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "pić piwo",
-            done: false
-        },
-        {
-            content: "pić gin z tonikiem",
-            done: true
-        },
-    ];
-
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li ${task.done ? "class=\"task__content\"" : ""}
-            >
-            ${task.content}
-            </li>
-            `;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-    };
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -31,6 +7,36 @@
         });
 
         render();
+    };
+
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    }
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li type="none" ${task.done ? "class=\"task__content\"" : ""}
+            >
+            <button class="button__confirm js-confirm">confirm</button>
+            ${task.content}
+            <button class="button__remove js-remove">remove</button>
+            </li>
+            `;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
     };
 
     const onFormSubmit = (event) => {
