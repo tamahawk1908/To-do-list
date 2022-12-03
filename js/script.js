@@ -6,13 +6,6 @@
             content: newTaskContent,
         });
 
-        function clearInput() {
-            document.getElementById("newTask").value = "",
-                document.getElementById("newTask").focus();
-        }
-
-        clearInput();
-
         render();
     };
 
@@ -68,16 +61,16 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        
+
         const newTaskElement = document.querySelector(".js-newTask");
         const newTaskContent = newTaskElement.value.trim();
-        
+
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
-            newTaskContent.value = "";
+            newTaskElement.value = "";
         }
 
-        newTaskContent.focus();
+        newTaskElement.focus();
     };
 
     const init = () => {
