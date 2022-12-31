@@ -65,13 +65,21 @@
     color: teal;
     background: none;
     border: none;
-    transition: transform 1s;
+    transition: color 1s, transform 1s linear;
 }
 
 .buttons__button:hover {
-    color:  hsl(180, 100%, 30%);
+    color: hsl(180, 100%, 30%);
 }
 
 .buttons__button:disabled {
     color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .buttons__button {
+        display: grid;
+        justify-items: center;
+        margin: 5px;
+    }
 }
